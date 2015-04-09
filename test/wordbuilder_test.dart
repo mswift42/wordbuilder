@@ -10,14 +10,15 @@ void main() => defineTests();
 
 void defineTests() {
   group('main tests', () {
-    test('calculate', () {
-      expect(calculate(), 42);
-    });
     test('contains only', () {
       expect(containsOnly(['h','e'], "he"), true);
     });
     test('contains only', () {
       expect(containsOnly(['h','e'], "her"), false);
+      expect(containsOnly(['h'], "her"),false);
+      expect(containsOnly(['a', 'o', 'l', 'h'],'HAllo'),true);
+      expect(containsOnly(['s', 'u', 'p', 'e', 'r'], 'supper'),true);
+      expect(containsOnly(['s','u','p','e','r'], 'super'), true);
     });
   });
 }
