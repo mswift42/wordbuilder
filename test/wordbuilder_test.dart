@@ -9,7 +9,8 @@ import 'package:unittest/unittest.dart';
 var strmap = {
   "I said: I'm sick of this shit!" : "I said Im sick of this shit",
   "sorry, something is not right?" : "sorry something is not right",
-  "This. Is. Stupid!!!!?????" : "This Is Stupid"
+  "This. Is. Stupid!!!!?????" : "This Is Stupid",
+  "I said: \"I am throwing, .!?\"" : "I said I am throwing "
   
 };
 
@@ -29,7 +30,7 @@ void defineTests() {
       expect(containsOnly(['s','u','p','e','r'], 'super'), true);
     });
     test('removePunctuation', () {
-      strmap.forEach((k,v) => expect(removePunctuation(k), v));
+      strmap.forEach((k,v) => expect(removePunctuationAndNums(k), v));
     });
   });
 }

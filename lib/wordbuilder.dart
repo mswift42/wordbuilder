@@ -7,7 +7,8 @@ library wordbuilder;
 int calculate() {
   return 6 * 7;
 }
-
+// Checks whether a String contains only a list of 
+// given characters.
 bool containsOnly(List<String> characters, String word) {
   Set<String>wordset = new Set.from(word.toLowerCase().split(''));
   for (var i in wordset) {
@@ -18,6 +19,6 @@ bool containsOnly(List<String> characters, String word) {
   return true;
 }
 
-String removePunctuation(String s) {
-  return s.replaceAll(new RegExp("['\.\?,\":!]"), '');
+String removePunctuationAndNums(String s) {
+  return s.replaceAll(new RegExp("[^a-zA-Z ]"), '');
 }
