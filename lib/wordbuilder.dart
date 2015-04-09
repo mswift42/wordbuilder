@@ -22,3 +22,7 @@ bool containsOnly(List<String> characters, String word) {
 String removePunctuationAndNums(String s) {
   return s.replaceAll(new RegExp("[^a-zA-Z ]"), '');
 }
+
+String onlyFileName(List<String> characters) {
+  return 'only' + characters.join('') + '.txt';
+}
