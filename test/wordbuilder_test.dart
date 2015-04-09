@@ -14,6 +14,11 @@ var strmap = {
   
 };
 
+var onlyfilemap = {
+  ['t','h','n','e'] : "onlythne.txt",
+  ['t','h','s','n','e','o'] : 'onlythsneo.txt'
+};
+
 
 void main() => defineTests();
 
@@ -31,6 +36,9 @@ void defineTests() {
     });
     test('removePunctuation', () {
       strmap.forEach((k,v) => expect(removePunctuationAndNums(k), v));
+    });
+    test('onlyFileName', () {
+      onlyfilemap.forEach((k,v) => expect(onlyFileName(k),v));
     });
   });
 }
