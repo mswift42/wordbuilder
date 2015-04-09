@@ -7,3 +7,13 @@ library wordbuilder;
 int calculate() {
   return 6 * 7;
 }
+
+bool containsOnly(List<String> characters, String word) {
+  Set<String>wordset = new Set.from(word.toLowerCase().split(''));
+  for (var i in wordset) {
+    if (!characters.contains(i)) {
+      return false;
+    }
+  }
+  return true;
+}
