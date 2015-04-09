@@ -16,5 +16,8 @@ void defineTests() {
     test('contains only', () {
       expect(containsOnly(['h','e'], "he"), true);
     });
+    test('contains only', () {
+      expect(containsOnly(['h','e'], "her"), false);
+    });
   });
 }
