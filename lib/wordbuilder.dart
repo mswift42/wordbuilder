@@ -17,3 +17,7 @@ bool containsOnly(List<String> characters, String word) {
   }
   return true;
 }
+
+String removePunctuation(String s) {
+  return s.replaceAll(new RegExp("['\.\?,\":!]"), '');
+}
