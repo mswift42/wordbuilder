@@ -7,8 +7,9 @@ import 'package:wordbuilder/wordbuilder.dart';
 import 'package:unittest/unittest.dart';
 
 var strmap = {
-  "I said: I'm sick of this shit!" : "I said I m sick of this shit",
-  "sorry, something is not right?" : "sorry something is not right"
+  "I said: I'm sick of this shit!" : "I said Im sick of this shit",
+  "sorry, something is not right?" : "sorry something is not right",
+  "This. Is. Stupid!!!!?????" : "This Is Stupid"
   
 };
 
