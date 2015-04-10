@@ -40,5 +40,9 @@ void defineTests() {
     test('onlyFileName', () {
       onlyfilemap.forEach((k,v) => expect(onlyFileName(k),v));
     });
+    test('filteredText', () {
+      expect(filteredText("abba abr ab bb dh da b a xx",['a','b']), "abba ab bb b a");
+      expect(filteredText("tn net rent eh tent he", ['t', 'h', 'n','e']), "tn net eh tent he");
+    });
   });
 }
