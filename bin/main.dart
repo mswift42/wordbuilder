@@ -7,7 +7,6 @@ import 'dart:convert';
 
 main() {
   
-  
 }
 
 String openFile(String name) {
@@ -15,6 +14,7 @@ String openFile(String name) {
   return file.readAsStringSync(encoding: LATIN1);
 }
 
-
-
-
+void saveString(String contents, List<String> chars) {
+  final Filename = wordbuilder.onlyFileName(chars);
+  new File(Filename).writeAsStringSync(contents);
+}
