@@ -2,10 +2,19 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:wordbuilder/wordbuilder.dart' as wordbuilder;
+import 'dart:io';
+import 'dart:convert';
 
 main() {
-  print('Hello world: ${wordbuilder.calculate()}!');
-  print('hallo'.toLowerCase().split(''));
-  var an = new Set.from('HallO'.toLowerCase().split(''));
-  print(an.join(''));
+  
+  
 }
+
+String openFile(String name) {
+  var file = new File(name);
+  return file.readAsStringSync(encoding: LATIN1);
+}
+
+
+
+
