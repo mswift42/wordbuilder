@@ -6,6 +6,9 @@ import 'dart:io';
 import 'dart:convert';
 
 main() {
+  String pnp = openFile('pandp.txt');
+  var homerow = ['a','s','h','t','g','y','n','e','o','i'];
+  saveString(wordbuilder.filteredText(pnp,homerow),homerow);
   
 }
 
