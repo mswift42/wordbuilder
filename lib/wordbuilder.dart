@@ -28,6 +28,6 @@ String onlyFileName(List<String> characters) {
 }
 String filteredText(String contents, List chars) {
   String replaced = removePunctuationAndNums(contents);
-  List<String>split = replaced.split(' ');
+  var split = new Set.from(replaced.split(' '));
   return split.where((i) => containsOnly(chars,i)).join(' ');
 }
